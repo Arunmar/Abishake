@@ -1,0 +1,15 @@
+{% extends "welcome.html"%}
+{% block title%}
+Text Foramatter
+{% endblock%}
+{% block content%}
+<h2 style="color:azure">News Input:</h2>
+<center><form action="process" method="post">
+    
+    {% csrf_token %}
+    {{ form.as_div }}
+    <input type="submit" value="SAVE ENTRY">
+</form>
+</center>
+    <center><div style="color: azure;">{{data}}</div></center>
+{% endblock%}
